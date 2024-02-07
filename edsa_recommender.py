@@ -40,6 +40,12 @@ from recommenders.content_based import content_model
 # Data Loading
 title_list = load_movie_titles('resources/data/movies.csv')
 
+# Other dependencies
+import pickle
+
+with open('resources/models/JL2_SVD.pkl', 'rb') as file:
+    model = pickle.load(file)
+
 # App declaration
 def main():
 
@@ -95,7 +101,7 @@ def main():
                 except:
                     st.error("Oops! Looks like this algorithm does't work.\
                               We'll need to fix it!")
-
+                              
 
     # -------------------------------------------------------------------
 
@@ -210,6 +216,7 @@ def main():
     if page_selection == "For The Tech Geeks":
         st.title("FOR THE TECH ENTHUSIASTS")
         st.write("### WHY USE SVD MODEL FOR INTELLISCAPE ANALYTICS APP???")
+        st.image('resources/imgs/bar_graph.png',use_column_width=True)
 
         st.subheader("Lowest RMSE")
         st.write("The primary reason for selecting the Singular Value Decompositon (SVD)  model is that it has the lowest RMSE among the models being compared.")
