@@ -152,7 +152,7 @@ def main():
         st.title("About Intelliscape Analytics")
         st.write("### Intelligence behind film production landscapes")
         st.write("With our intelligent algorithms,  Netflix users can enjoy a personalized entertainment experience. No more sifting through endless options – our technology guides viewers to discover hidden gems,  enhancing daily content consumption with a tailored and thoroughly satisfying impact.")
-        st.image('resources/imgs/about.png', use_column_width=True)
+        # st.image('resources/imgs/about.png', use_column_width=True)
 
     if page_selection == "Contact Us":
         st.title("For further assistance,  contact us at:")
